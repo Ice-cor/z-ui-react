@@ -2,9 +2,12 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin'); 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         index: './lib/index.tsx'
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
     output: {
         path: path.resolve(__dirname, 'dist/lib'),
@@ -25,4 +28,18 @@ module.exports = {
             template: './index.html'   //  HTML模板路径
         })
     ],
+    externals: { // 排除外部依赖的包，减小打包体积
+        react: {
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'React',
+        },
+        'react-dom': {
+            commonjs: 'react-dom',
+            commonjs2: 'react-dom',
+            amd: 'react-dom',
+            root: 'reactDOM',
+        },
+    }
 };
