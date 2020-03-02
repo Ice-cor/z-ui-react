@@ -1,4 +1,5 @@
-let body = document.body;
-let div = document.createElement('div');
-div.innerText = '12346';
-body.appendChild(div);
+import React from 'react';
+import ReactDom from 'react-dom';
+
+console.log(React);
+console.log(ReactDom); 

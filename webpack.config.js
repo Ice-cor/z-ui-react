@@ -25,4 +25,4 @@ module.exports = {
             template: './index.html'   //  HTML模板路径
         })
     ],
-}
+};
