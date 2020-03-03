@@ -1,6 +1,5 @@
 import React from 'react';
 
-console.log(React);
 function Button() {
     return (
         <div>
