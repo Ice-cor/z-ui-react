@@ -1,5 +1,4 @@
 const base = require('./webpack.config')
-const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin'); 
 
 module.exports = Object.assign({}, base, {

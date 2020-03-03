@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "declaration": true,
     "baseUrl": ".",
     "module": "esnext",
@@ -9,7 +10,6 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": ".",
-    "outDir": "dist",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
