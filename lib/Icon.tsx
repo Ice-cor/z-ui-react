@@ -1,11 +1,17 @@
 import React from 'react';
+import './importIcons';
 
 interface IconProps {
     name: string;
 }
-const Icon: React.FC<IconProps> = () => {
+
+const Icon: React.FC<IconProps> = (props) => {
     return (
-        <div>icon</div>
+        <span>
+            <svg>
+                <use xlinkHref={`#${props.name}`}></use>
+            </svg>
+        </span>
     );
 };
 

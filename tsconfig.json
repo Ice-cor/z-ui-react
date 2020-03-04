@@ -23,6 +23,7 @@
     "noUnusedLocals": true
   },
   "include": [
+    "lib/**/*" // ts 检查的目录
   ],
   "exclude": [
     "node_modules",
