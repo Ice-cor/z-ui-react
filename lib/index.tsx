@@ -9,7 +9,7 @@ const App: React.FC = () => {
     return (
         <div id="app">
             <Icon name="setting" />
-            <Icon name="arrow_right" onClick={fn}></Icon>
+            <Icon name="arrow_right" onClick={fn} className="test-name"></Icon>
         </div>
     )
 }
