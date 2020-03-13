@@ -9,7 +9,9 @@ describe('icon', () => {
         expect(json).toMatchSnapshot();
     });
     it('onClick', () => {
-        const component = mount(<Icon name="info" onClick={fn}/>)
-        component.find()
+        const fn = jest.fn();
+        const component = mount(<Icon name="info" onClick={fn}/>);
+        component.find('svg').simulate('click');
+        expect(fn).toBeCalled();
     })
 });
