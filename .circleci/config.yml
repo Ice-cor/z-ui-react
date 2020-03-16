@@ -10,17 +10,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: yarn install
-            - run: yarn test
+            - run: yarn ci
 workflows:
   build-and-test:
     jobs:
       - build-and-test
-test:
-  <<: *defaults
-  steps:
-    - checkout
-    - attach_workspace:
-        at: .
-    - run: yarn ci
-    - store_test_results:
-        path: test-results
