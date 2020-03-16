@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="7" failures="0" time="12.315">
-  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-03-16T03:36:51" time="5.783" tests="1">
-    <testcase classname="button 这是一个div" name="button 这是一个div" time="0.02">
+<testsuites name="jest tests" tests="7" failures="0" time="10.912">
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-03-16T07:13:39" time="5.516" tests="2">
+    <testcase classname="icon 这是一个icon" name="icon 这是一个icon" time="0.013">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.042">
     </testcase>
   </testsuite>
-  <testsuite name="classnames方法" errors="0" failures="0" skipped="0" timestamp="2020-03-16T03:36:51" time="7.343" tests="4">
-    <testcase classname="classnames方法 接受 1 个className" name="classnames方法 接受 1 个className" time="0.004">
+  <testsuite name="classnames方法" errors="0" failures="0" skipped="0" timestamp="2020-03-16T07:13:44" time="0.387" tests="4">
+    <testcase classname="classnames方法 接受 1 个className" name="classnames方法 接受 1 个className" time="0.001">
     </testcase>
-    <testcase classname="classnames方法 接受 2 个className" name="classnames方法 接受 2 个className" time="0">
+    <testcase classname="classnames方法 接受 2 个className" name="classnames方法 接受 2 个className" time="0.001">
     </testcase>
-    <testcase classname="classnames方法 接受 undefined, 结果不会有undefined" name="classnames方法 接受 undefined, 结果不会有undefined" time="0.001">
+    <testcase classname="classnames方法 接受 undefined, 结果不会有undefined" name="classnames方法 接受 undefined, 结果不会有undefined" time="0">
     </testcase>
     <testcase classname="classnames方法 不传值，得到空字符串" name="classnames方法 不传值，得到空字符串" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2020-03-16T03:36:51" time="7.475" tests="2">
-    <testcase classname="icon 这是一个icon" name="icon 这是一个icon" time="0.022">
-    </testcase>
-    <testcase classname="icon onClick" name="icon onClick" time="0.046">
+  <testsuite name="button" errors="0" failures="0" skipped="0" timestamp="2020-03-16T07:13:45" time="0.41" tests="1">
+    <testcase classname="button 这是一个div" name="button 这是一个div" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>
