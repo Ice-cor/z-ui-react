@@ -14,4 +14,8 @@ describe('icon', () => {
         component.find('svg').simulate('click');
         expect(fn).toBeCalled();
     })
+    it('测试错误',  () => {
+        const n = 1;
+        expect(n).toEqual(2);
+    });
 });
