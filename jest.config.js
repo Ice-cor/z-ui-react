@@ -1,11 +1,8 @@
 module.exports = {
     verbose: true,
     clearMocks: false,
-    collectCoverage: true, // 测试覆盖率
-    collectCoverageFrom: ["lib/**/*.{ts,tsx}", "!**/node_modules/**"],
-    coverageDirectory: 'coverage',
-    coverageReporters: ['text', 'lcov'],
-    reporters: ["default", "jest-junit"],
+    reporters: ["default"],
+    collectCoverage: false,
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
     moduleDirectories: ['node_modules'],
     globals: {
