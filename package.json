@@ -1,7 +1,9 @@
 {
   "name": "zui-r-1",
-  "version": "0.0.2",
-  "files": ["./dist"],
+  "version": "0.0.3",
+  "files": [
+    "./dist"
+  ],
   "description": "UI轮子react版",
   "main": "dist/lip/index.js",
   "types": "dist/lib/index",
