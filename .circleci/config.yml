@@ -68,7 +68,10 @@ workflows:
           requires:
             - build
           filters:
-            tags:
-              only: /^v[0-9]+(\.[0-9]+)*/
             branches:
-              ignore: /.*/
+              only: /deploy/ # 提交到分支，检测到有分支变动，才自动部署
+#            ci 仍旧无法健测到tag，不用此方式自动部署
+#            tags:
+#              only: /^v[0-9]+(\.[0-9]+)*/
+#            branches:
+#              ignore: /.*/
