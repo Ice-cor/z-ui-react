@@ -1,12 +1,13 @@
 import React from 'react';
-import './icon';
+import Icon from './icon';
 
-const Icon: React.FC = () => {
+const IconExample: React.FC = () => {
     return (
         <div>
             <Icon name="info" />
+            <Icon name="setting" />
         </div>
     )
-}
+};
 
-export default Icon;
+export default IconExample;
