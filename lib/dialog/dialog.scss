@@ -1,0 +1,9 @@
+@import "../style/mixins/reset";
+
+.zui-dialog {
+  @include reset-component;
+  &-mask {
+    position: fixed;
+  }
+}
+

@@ -1,6 +1,6 @@
-// 类名简便的写法
+// 简化类名的写法
 function scopedClassMaker(prefix: string) {
-    return function(name: string) {
+    return function(name?: string) {
         return [prefix, name].filter(Boolean).join('-')
     }
 }

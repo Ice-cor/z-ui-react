@@ -15,7 +15,7 @@ const Dialog: React.FC<Props> = (props) => {
         props.visible ?
             <Fragment>
                 <div className={sc('mask')}>dialogWrap</div>
-                <div className={sc('wrap')}>
+                <div className={sc()}>
                     <div className={sc('title')}>111</div>
                 </div>
             </Fragment>

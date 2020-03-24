@@ -1,0 +1,9 @@
+@import "./style/mixins/reset";
+
+[class^='zui'] {
+  @include reset-component;
+}
+
+*{
+  color: red;
+}
