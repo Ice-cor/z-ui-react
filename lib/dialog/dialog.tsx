@@ -6,6 +6,8 @@ import './dialog.scss';
 
 interface Props {
     visible: boolean;
+    onOk?: () => void;
+    onCancel?: () => void;
 }
 
 const scopedClass = scopedClassMaker('zui-dialog');
@@ -20,14 +22,14 @@ const Dialog: React.FC<Props> = (props) => {
                     <div className={sc('content')}>
                         <div className={sc('header')}>
                             <h4 className={sc('title')}>Title</h4>
-                            <Icon name="close" className={sc('close')} />
+                            <Icon name="close" className={sc('close')} onClick={props.onCancel}/>
                         </div>
                         <div className={sc('body')}>
                             {props.children}
                         </div>
                         <div className={sc('footer')}>
-                            <button>Ok</button>
-                            <button>Cancel</button>
+                            <button onClick={props.onOk}>Ok</button>
+                            <button onClick={props.onCancel}>Cancel</button>
                         </div>
                     </div>
                 </div>
