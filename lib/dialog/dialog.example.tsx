@@ -6,7 +6,7 @@ const IconExample: React.FC = () => {
     return (
         <div>
             <button onClick={() => {setVisible(!visible);}}>打开dialog</button>
-            <Dialog visible={visible} />
+            <Dialog visible={visible} >nihaoa</Dialog>
         </div>
     );
 };

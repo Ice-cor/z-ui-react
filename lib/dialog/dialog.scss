@@ -1,9 +1,48 @@
 @import "../style/mixins/reset";
 
 .zui-dialog {
-  @include reset-component;
+  width: 600px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 30px auto 0;
   &-mask {
     position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &-content{
+    position: relative;
+    border-radius: 6px;
+    background-color: #fff;
+    outline: 0;
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.12), 0 0 10px rgba(0,0,0,.06);
+    box-shadow: 0 4px 4px rgba(0,0,0,.12), 0 0 10px rgba(0,0,0,.06);
+    padding: 20px;
+  }
+  &-title{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  &-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+  }
+  &-body{
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  &-footer{
+    text-align: right;
   }
 }
 

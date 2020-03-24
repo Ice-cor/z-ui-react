@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 
-import { scopedClassMaker } from '../_util/classes';
+import {scopedClassMaker} from '../_util/classes';
+import Icon from '../icon/icon';
 import './dialog.scss';
 
 interface Props {
@@ -16,7 +17,19 @@ const Dialog: React.FC<Props> = (props) => {
             <Fragment>
                 <div className={sc('mask')}>dialogWrap</div>
                 <div className={sc()}>
-                    <div className={sc('title')}>111</div>
+                    <div className={sc('content')}>
+                        <div className={sc('header')}>
+                            <h4 className={sc('title')}>Title</h4>
+                            <Icon name="close" className={sc('close')} />
+                        </div>
+                        <div className={sc('body')}>
+                            {props.children}
+                        </div>
+                        <div className={sc('footer')}>
+                            <button>Ok</button>
+                            <button>Cancel</button>
+                        </div>
+                    </div>
                 </div>
             </Fragment>
             :
