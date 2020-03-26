@@ -2,8 +2,16 @@ import React, {Fragment, ReactElement} from 'react';
 import ReactDOM from 'react-dom';
 
 import {scopedClassMaker} from '../_util/classes';
+import classnames from '../helpers/classnames';
 import Icon from '../icon/icon';
 import './dialog.scss';
+
+enum DialogType {
+    confirm = 'confirm',
+    info = 'info',
+    error = 'error',
+    warning = 'warning',
+}
 
 interface Props {
     visible: boolean;
@@ -12,6 +20,8 @@ interface Props {
     footer?: Array<ReactElement>;
     okText?: string;
     cancelText?: string;
+    dialogType?: DialogType;
+    closable?: Boolean;
 }
 
 const scopedClass = scopedClassMaker('zui-dialog');
@@ -21,10 +31,14 @@ const Dialog: React.FC<Props> = (props) => {
     const modal = props.visible ?
         <Fragment>
             <div className={sc('mask')}>dialogWrap</div>
-            <div className={sc()}>
+            <div className={classnames(sc(), sc(props.dialogType))}>
                 <div className={sc('content')}>
-                    <Icon name="close" className={sc('close')} onClick={props.onCancel} />
-                    <div className={sc('header')}>
+                    {
+                        props.closable ? null :
+                            <Icon name="close" className={sc('close')} onClick={props.onCancel} />
+                    }
+                    <div
+                        className={sc('header')}>
                         <h4 className={sc('title')}>Title</h4>
                     </div>
                     <div className={sc('body')}>
@@ -58,7 +72,7 @@ const confirm = (content: string) => {
         ReactDOM.unmountComponentAtNode(div);
         document.body.removeChild(div);
     };
-    const component = <Dialog visible={true} onCancel={hide}>{content}</Dialog>;
+    const component = <Dialog visible={true} onCancel={hide} dialogType={DialogType.confirm} closable={true}>{content}</Dialog>;
     const div = document.createElement('div');
     ReactDOM.render(component, div);
     document.body.appendChild(div);
