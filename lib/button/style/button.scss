@@ -1,6 +1,6 @@
 @import "../../style/themes/index";
 
-.zui-button {
+.#{$zui-prefix}-button {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 400;
@@ -15,5 +15,4 @@
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 6px;
-  color: $text-color;
 }
