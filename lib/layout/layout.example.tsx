@@ -5,12 +5,12 @@ import Content from './content';
 import Footer from './footer';
 import Sider from './sider';
 
-const  LayoutExample: React.FC = () => {
+const LayoutExample: React.FC = () => {
     return (
         <div>
             <div>
                 <h2>例子1</h2>
-                <Layout>
+                <Layout className="nihao" style={{width: 500}}>
                     <Header>Header</Header>
                     <Content>Content</Content>
                     <Footer>Footer</Footer>
@@ -18,7 +18,7 @@ const  LayoutExample: React.FC = () => {
             </div>
             <div>
                 <h2>例子2</h2>
-                <Layout>
+                <Layout style={{width: 500}}>
                     <Header>Header</Header>
                     <Layout>
                         <Sider>Sider</Sider>
@@ -27,8 +27,30 @@ const  LayoutExample: React.FC = () => {
                     <Footer>Footer</Footer>
                 </Layout>
             </div>
+            <div>
+                <h2>例子3</h2>
+                <Layout style={{width: 500}}>
+                    <Header>Header</Header>
+                    <Layout>
+                        <Content>Content</Content>
+                        <Sider>Sider</Sider>
+                    </Layout>
+                    <Footer>Footer</Footer>
+                </Layout>
+            </div>
+            <div>
+                <h2>例子4</h2>
+                <Layout style={{width: 500}} className="hasAside">
+                    <Sider>Sider</Sider>
+                    <Layout>
+                        <Header>Header</Header>
+                        <Content>Content</Content>
+                        <Footer>Footer</Footer>
+                    </Layout>
+                </Layout>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default LayoutExample
+export default LayoutExample;

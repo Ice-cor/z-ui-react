@@ -1,10 +1,13 @@
 import React from 'react';
+import {scopedClassMaker} from '../_util/classes';
+
+const sc = scopedClassMaker('zui-layout');
 
 const Sider: React.FC = (props) => {
     return (
-        <div>
+        <aside className={sc('sider')}>
             {props.children}
-        </div>
+        </aside>
     );
 };
 

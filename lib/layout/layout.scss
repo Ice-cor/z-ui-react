@@ -1,0 +1,31 @@
+@import "../style/themes/index";
+
+$layout-prefix: #{$zui-prefix}-layout;
+
+// layout
+
+.#{$layout-prefix} {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  background: #f0f2f5;
+  &-header, &-footer {
+    flex: 0 0 auto;
+    height: 64px;
+    padding: 0 50px;
+    line-height: 64px;
+  }
+  &-content {
+    flex: auto;
+  }
+  &.hasAside{
+    flex-direction: row;
+    .#{$layout-prefix}{
+      flex-direction: column;
+    }
+  }
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+}
