@@ -40,7 +40,7 @@ const LayoutExample: React.FC = () => {
             </div>
             <div>
                 <h2>例子4</h2>
-                <Layout style={{width: 500}} className="hasAside">
+                <Layout style={{width: 500}} className="hehe">
                     <Sider>Sider</Sider>
                     <Layout>
                         <Header>Header</Header>

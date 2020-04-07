@@ -14,12 +14,12 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const Layout: React.FC<Props> = (props) => {
     const {className, ...restProps} = props;
     const children = props.children as Array<ReactElement>;
-    const hasAside = children.length &&
+    const hasAside = 'length' in children &&
         children.some(node => node.type === Sider);
 
     return (
         <section
-            className={sc('', {extra: [className, hasAside ? 'hasAside' : ''].join(' ')})}
+            className={sc({'': true, hasAside}, {extra: className})}
             {...restProps}>
             {props.children}
         </section>

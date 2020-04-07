@@ -18,14 +18,14 @@ $layout-prefix: #{$zui-prefix}-layout;
   &-content {
     flex: auto;
   }
-  &.hasAside{
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAside{
     flex-direction: row;
     .#{$layout-prefix}{
       flex-direction: column;
     }
-  }
-  & & {
-    flex-grow: 1;
-    flex-direction: row;
   }
 }
