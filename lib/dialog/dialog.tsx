@@ -1,8 +1,8 @@
 import React, {Fragment, ReactElement, ReactNode} from 'react';
 import ReactDOM from 'react-dom';
 
-import {scopedClassMaker} from '../_util/classes';
-import classnames from '../helpers/classnames';
+import classnames, {scopedClassMaker} from '../_util/classes';
+
 import Icon from '../icon/icon';
 import './dialog.scss';
 
