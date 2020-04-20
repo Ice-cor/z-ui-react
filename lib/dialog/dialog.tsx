@@ -99,5 +99,5 @@ const confirm = ({content, title, yes, no}: { content: string, title?: string, y
     const close = modal({content, buttons, dialogType: DialogType.confirm});
 };
 
-export {confirm, modal};
+export {confirm, modal, Dialog};
 export default Dialog;

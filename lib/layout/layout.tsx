@@ -1,8 +1,9 @@
 import React, {ReactElement} from 'react';
 import {scopedClassMaker} from '../_util/classes';
 
-import './layout.scss';
 import Sider from './sider';
+import './layout.scss';
+
 
 const sc = scopedClassMaker('zui-layout');
 
@@ -26,11 +27,9 @@ const Layout: React.FC<Props> = (props) => {
     );
 };
 
-export {
-    // Header,
-    // Content,
-    // Footer,
-    // Sider,
-};
-
+export {default as Footer} from './footer';
+export {default as Header} from './header';
+export {default as Content} from './content';
+export {default as Sider} from './sider';
+export {Layout};
 export default Layout;

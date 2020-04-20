@@ -7,38 +7,45 @@ import DialogExample from './lib/dialog/dialog.example';
 import ButtonExample from './lib/button/button.example';
 import LayoutExample from './lib/layout/layout.example';
 
-import './lib/index.scss';
+import {Header, Content, Footer, Layout, Sider} from './lib/layout/layout';
+
+import './example.scss';
 
 ReactDom.render((
         <Router>
-            <div>
-                <header>zui</header>
-                <div>
-                    <aside>
-                        <h2>组件</h2>
-                        <ul>
-                            <li>
-                                <Link to="/icon">Icon</Link>
-                            </li>
-                            <li>
-                                <Link to="/button">button</Link>
-                            </li>
-                            <li>
-                                <Link to="/dialog">Dialog</Link>
-                            </li>
-                            <li>
-                                <Link to="/layout">Layout</Link>
-                            </li>
-                        </ul>
-                    </aside>
-                    <main className="body">
+            <Layout className="page">
+                <Sider className="sider">
+                    <h2>组件</h2>
+                    <ul className="nav-list">
+                        <li className="nav-item">
+                            <Link to="/icon">Icon <span className="title-zh">图标</span></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/button">button <span className="title-zh">按钮</span></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/dialog">Dialog <span className="title-zh">对话框</span></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/layout">Layout <span className="title-zh">布局</span></Link>
+                        </li>
+                    </ul>
+                </Sider>
+
+                <Layout>
+                    <Header>
+                        <header>zui</header>
+                    </Header>
+                    <Content className="body">
                         <Route path="/icon" component={IconExample}/>
                         <Route path="/dialog" component={DialogExample}/>
                         <Route path="/button" component={ButtonExample}/>
                         <Route path="/layout" component={LayoutExample}/>
-                    </main>
-                </div>
-            </div>
+                    </Content>
+                    <Footer>footer</Footer>
+                </Layout>
+
+            </Layout>
         </Router>
     )
     , document.getElementById('root'));
