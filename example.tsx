@@ -6,10 +6,12 @@ import IconExample from './lib/icon/icon.example';
 import DialogExample from './lib/dialog/dialog.example';
 import ButtonExample from './lib/button/button.example';
 import LayoutExample from './lib/layout/layout.example';
+import FormExample from "./lib/form/form.example";
 
-import {Header, Content, Footer, Layout, Sider} from './lib/layout/layout';
+import {Header, Content, Layout, Sider} from './lib/layout/layout';
 
 import './example.scss';
+
 
 ReactDom.render((
         <Router>
@@ -29,6 +31,9 @@ ReactDom.render((
                         <li className="nav-item">
                             <Link to="/layout">Layout <span className="title-zh">布局</span></Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/form">Form <span className="title-zh">表单</span></Link>
+                        </li>
                     </ul>
                 </Sider>
 
@@ -41,8 +46,9 @@ ReactDom.render((
                         <Route path="/dialog" component={DialogExample}/>
                         <Route path="/button" component={ButtonExample}/>
                         <Route path="/layout" component={LayoutExample}/>
+                        <Route path="/form" component={FormExample}/>
                     </Content>
-                    <Footer>footer</Footer>
+                    {/*<Footer>footer</Footer>*/}
                 </Layout>
 
             </Layout>

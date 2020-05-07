@@ -1,4 +1,5 @@
 .example-layout{
+  text-align: center;
   .zui-layout{
     color: white;
     .zui-layout-header, .zui-layout-footer{
@@ -6,6 +7,8 @@
     }
     .zui-layout-content {
       background-color: #108EE9;
+      min-height: 120px;
+      line-height: 120px;
     }
     .zui-layout-sider{
       background-color: #3ba0e9;
