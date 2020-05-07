@@ -1,0 +1,16 @@
+.example-layout{
+  .zui-layout{
+    color: white;
+    .zui-layout-header, .zui-layout-footer{
+      background-color: #7dbcea;
+    }
+    .zui-layout-content {
+      background-color: #108EE9;
+    }
+    .zui-layout-sider{
+      background-color: #3ba0e9;
+      width: 100px;
+    }
+  }
+
+}

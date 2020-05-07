@@ -1,16 +1,13 @@
 import React from 'react';
-import Layout from './layout';
-import Header from './header';
-import Content from './content';
-import Footer from './footer';
-import Sider from './sider';
+import {Layout, Header, Sider, Footer, Content} from "./layout";
+import '../style/exampleStyles/layout.scss'
 
 const LayoutExample: React.FC = () => {
     return (
-        <div>
+        <div className="example-layout">
             <div>
                 <h2>例子1</h2>
-                <Layout className="nihao" style={{width: 500}}>
+                <Layout style={{width: 500}}>
                     <Header>Header</Header>
                     <Content>Content</Content>
                     <Footer>Footer</Footer>

@@ -8,7 +8,6 @@ $layout-prefix: #{$zui-prefix}-layout;
   display: flex;
   flex: auto;
   flex-direction: column;
-  //background: #f0f2f5;
   &-header, &-footer {
     flex: 0 0 auto;
     height: 64px;
@@ -18,14 +17,14 @@ $layout-prefix: #{$zui-prefix}-layout;
   &-content {
     flex: auto;
   }
-  & & {
-    flex-grow: 1;
-    flex-direction: row;
-  }
+  //& & {
+  //  //flex-grow: 1;
+  //  //flex-direction: row;
+  //}
   &-hasAside{
     flex-direction: row;
-    .#{$layout-prefix}{
-      flex-direction: column;
-    }
+    //.#{$layout-prefix}{
+    //  flex-direction: column;
+    //}
   }
 }
