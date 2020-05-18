@@ -1,6 +1,6 @@
 import * as React from "react";
 import Form from "./form";
-import {useState} from "react";
+import {useState, Fragment} from "react";
 
 
 const FormExample: React.FC = () => {
@@ -16,7 +16,12 @@ const FormExample: React.FC = () => {
         <Form
             value={formData}
             fields={fields}
-            buttons={[<button type="submit">提交</button>, <button>返回</button>]}
+            buttons={
+                <Fragment>
+                    <button type="submit">提交</button>
+                    <button>返回</button>
+                </Fragment>
+            }
         />
     );
 };

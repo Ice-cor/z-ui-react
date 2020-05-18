@@ -22,4 +22,16 @@ $btn-prefix: #{$zui-prefix}-btn;
   &:active{
     background: #f7f7fa;
   }
+  &-primary {
+    color: white;
+    background: #3498ff;
+    transition: color .2s linear,background-color .3s linear;
+  }
+  &-primary:hover, &-primary:focus{
+    background-color: #1675e0;
+    color: white;
+  }
+  &-primary:active{
+    background-color: #3498ff;
+  }
 }

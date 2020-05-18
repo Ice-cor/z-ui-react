@@ -6,6 +6,7 @@ const ButtonExample: React.FC = () => {
     return (
         <div>
             <Button onClick={()=>{console.log('点击了')}}>点击</Button>
+            <Button type="primary" onClick={()=>{console.log('点击了')}}>点击</Button>
         </div>
     )
 }
