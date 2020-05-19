@@ -13,4 +13,5 @@
   font-size: $font-size-base;
   line-height: 1.42857143;
   border-radius: $btn-border-radius-base;
+  transition: color .2s linear,background-color .3s linear;
 }

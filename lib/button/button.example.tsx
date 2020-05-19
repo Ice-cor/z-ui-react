@@ -7,6 +7,9 @@ const ButtonExample: React.FC = () => {
         <div>
             <Button onClick={()=>{console.log('点击了')}}>点击</Button>
             <Button type="primary" onClick={()=>{console.log('点击了')}}>点击</Button>
+            <Button type="success" onClick={()=>{console.log('点击了')}}>点击</Button>
+            <Button type="warning" onClick={()=>{console.log('点击了')}}>点击</Button>
+            <Button type="danger" onClick={()=>{console.log('点击了')}}>点击</Button>
         </div>
     )
 }

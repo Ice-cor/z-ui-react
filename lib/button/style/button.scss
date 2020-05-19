@@ -11,27 +11,59 @@ $btn-prefix: #{$zui-prefix}-btn;
           $font-size-base,
           $btn-border-radius-base);
   &-default {
-    color: #575757;
-    background: #f7f7fa;
-    transition: color .2s linear,background-color .3s linear;
+    color: $text-color;
+    background: $default-color;
   }
   &:hover,&:focus{
-    color: #575757;
-    background-color: #e5e5ea;
+    background-color: darken($default-color, 5%);
   }
   &:active{
-    background: #f7f7fa;
+    background-color: $default-color;
   }
+
   &-primary {
     color: white;
-    background: #3498ff;
-    transition: color .2s linear,background-color .3s linear;
+    background-color: $primary-color;
   }
   &-primary:hover, &-primary:focus{
-    background-color: #1675e0;
-    color: white;
+    background-color: darken($primary-color, 10%);
   }
   &-primary:active{
-    background-color: #3498ff;
+    background-color: $primary-color;
+  }
+
+  &-success {
+    color: white;
+    background-color: $success-color;
+  }
+  &-success:hover, &-success:focus{
+    background-color: darken($success-color, 10%);
+  }
+  &-psuccess:active{
+    background-color: $success-color;
+  }
+
+  &-warning {
+    color: white;
+    background-color: $warning-color;
+  }
+  &-warning:hover, &-warning:focus{
+    background-color: darken($warning-color, 10%);
+    color: white;
+  }
+  &-warning:active{
+    background-color: $warning-color;
+  }
+
+  &-danger {
+    color: white;
+    background-color: $danger-color;
+  }
+  &-danger:hover, &-danger:focus{
+    background-color: darken($danger-color, 10%);
+    color: white;
+  }
+  &-danger:active{
+    background-color: $danger-color;
   }
 }
