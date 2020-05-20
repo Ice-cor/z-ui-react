@@ -17,7 +17,7 @@ import './example.scss';
 ReactDom.render((
         <Router>
             <Layout className="page">
-                <Sider className="sider">
+                <Sider className="page-sider">
                     <h2>组件</h2>
                     <ul className="nav-list">
                         <li className="nav-item">
@@ -45,7 +45,7 @@ ReactDom.render((
                     <Header>
                         <header>zui</header>
                     </Header>
-                    <Content className="body">
+                    <Content className="page-context">
                         <Route path="/icon" component={IconExample}/>
                         <Route path="/dialog" component={DialogExample}/>
                         <Route path="/button" component={ButtonExample}/>

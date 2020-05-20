@@ -4,7 +4,10 @@ import Input from "../input/input";
 const InputExample: React.FC = (props) => {
     return (
         <div>
-            <Input placeholder="呵呵呵"/>
+            <div>
+                <Input placeholder="Basic input" type="text"/>
+            </div>
+
         </div>
     );
 };
