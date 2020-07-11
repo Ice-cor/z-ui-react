@@ -6,12 +6,13 @@ interface Props {
     onClick?: React.MouseEventHandler;
 }
 
-const scopedClass = scopedClassMaker('zui-btn');
-const sc = scopedClass;
+const sc = scopedClassMaker('zui-btn');
 
 const Button: React.FC<Props> = (props) => {
+    // const {className, ...restProps} = props;
     return (
-        <button className={`zui-btn ${sc(props.type ? props.type : 'default')}`} onClick={props.onClick}>
+        // className={`zui-btn ${sc(props.type ? props.type : 'default')}`}
+        <button className={`zui-btn ${sc(props.type ? props.type : 'default')}`}>
             {props.children}
         </button>
     )

@@ -26,8 +26,7 @@ interface Props {
     closable?: Boolean;
 }
 
-const scopedClass = scopedClassMaker('zui-dialog');
-const sc = scopedClass;
+const sc = scopedClassMaker('zui-dialog');
 
 const Dialog: React.FC<Props> = (props) => {
     const modal = props.visible ?
