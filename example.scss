@@ -21,6 +21,9 @@ body {
 *::before{box-sizing: border-box;}
 *::after{box-sizing: border-box;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
+ul,ol{
+  list-style: none;
+}
 
 //[class^='zui'] {
 //  @include reset-component;
@@ -34,9 +37,22 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
   &-sider{
     width: 260px;
     background-color: #f4f5f7;
-    padding: 0 10px;
+    padding: 10px;
     height: 100%;
+    .page-logo{
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 10px;
+      > img{
+        // display: block;
+        height: 100%;
+      }
+    }
+    > h2{
+      padding-left: 10px;
+    }
     .nav-list {
+      padding-left: 10px;
       .nav-item:hover{
         background-color: darken(#f4f5f7, 5%);
       }

@@ -12,12 +12,15 @@ import InputExample from "./lib/input/input.example";
 import {Header, Content, Layout, Sider} from './lib/layout/layout';
 
 import './example.scss';
+import logo from './logo.png'
 
 
 ReactDom.render((
         <Router>
             <Layout className="page">
                 <Sider className="page-sider">
+                    <div className="page-logo"><img src={logo} /></div>
+                    
                     <h2>组件</h2>
                     <ul className="nav-list">
                         <li className="nav-item">
