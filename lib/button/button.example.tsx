@@ -7,7 +7,9 @@ const style = {
 const ButtonExample: React.FC = () => {
     return (
         <div>
-            <Button onClick={()=>{console.log('点击了')}} style={style}>Default</Button>
+            <Button onClick={()=>{console.log('点击了')}} style={style}>
+                Default
+            </Button>
         </div>
     )
 }

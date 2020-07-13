@@ -10,7 +10,7 @@ import LayoutExample from './lib/layout/layout.example';
 import FormExample from "./lib/form/form.example";
 import InputExample from "./lib/input/input.example";
 
-import {Header, Content, Layout, Sider} from './lib/layout/layout';
+import {Content, Layout, Sider} from './lib/layout/layout';
 
 import './example.scss';
 import logo from './logo.png'
@@ -44,10 +44,10 @@ ReactDom.render((
                     </ul>
                 </Sider>
 
-                <Layout>
-                    <Header>
+                <Layout className="page-right">
+                    {/* <Header>
                         <header>zui</header>
-                    </Header>
+                    </Header> */}
                     <Content className="page-context">
                         <Route path="/icon" component={IconExample}/>
                         <Route path="/dialog" component={DialogExample}/>
