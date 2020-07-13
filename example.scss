@@ -44,7 +44,6 @@ ul,ol{
       padding: 10px;
       margin-bottom: 10px;
       > img{
-        // display: block;
         height: 100%;
       }
     }
@@ -57,8 +56,8 @@ ul,ol{
         background-color: darken(#f4f5f7, 5%);
       }
       .nav-item{
-        padding: 8px 12px;
         a {
+          padding: 8px 12px;
           display: block;
           width: 100%;
           height: 100%;
@@ -77,6 +76,21 @@ ul,ol{
   }
   &-context {
     padding: 20px;
+    .code-block{
+      margin: 18px 0;
+      border: 1px dashed #f1f1f1;
+      padding: 18px 18px 28px;
+      transition: border-color .3s linear;
+      .code-toolbar{
+        padding-bottom: 8px;
+        border-color: #f1f1f1;
+        border-bottom: 1px dashed #f5f5f5;
+        text-align: right;
+      }
+      &:hover{
+        border-color:#3498ff;
+      }
+    }
     .button-page{
       .zui-btn{
         margin-right: 20px;

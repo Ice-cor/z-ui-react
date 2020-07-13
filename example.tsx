@@ -4,7 +4,8 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
 import IconExample from './lib/icon/icon.example';
 import DialogExample from './lib/dialog/dialog.example';
-import ButtonExample from './lib/button/button.example';
+// import ButtonExample from './lib/button/button.example';
+import ButtonDemo from './lib/button/buttonDemo';
 import LayoutExample from './lib/layout/layout.example';
 import FormExample from "./lib/form/form.example";
 import InputExample from "./lib/input/input.example";
@@ -13,7 +14,6 @@ import {Header, Content, Layout, Sider} from './lib/layout/layout';
 
 import './example.scss';
 import logo from './logo.png'
-
 
 ReactDom.render((
         <Router>
@@ -51,7 +51,7 @@ ReactDom.render((
                     <Content className="page-context">
                         <Route path="/icon" component={IconExample}/>
                         <Route path="/dialog" component={DialogExample}/>
-                        <Route path="/button" component={ButtonExample}/>
+                        <Route path="/button" component={ButtonDemo}/>
                         <Route path="/layout" component={LayoutExample}/>
                         <Route path="/input" component={InputExample}/>
                         <Route path="/form" component={FormExample}/>

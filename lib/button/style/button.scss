@@ -39,7 +39,7 @@ $btn-prefix: #{$zui-prefix}-btn;
   &-success:hover, &-success:focus{
     background-color: darken($success-color, 10%);
   }
-  &-psuccess:active{
+  &-success:active{
     background-color: $success-color;
   }
 
