@@ -66,4 +66,12 @@ $btn-prefix: #{$zui-prefix}-btn;
   &-danger:active{
     background-color: $danger-color;
   }
+
+  &-icon{
+      padding: 12px;
+      border-radius: 50%;
+      > svg {
+        display: block;
+      }
+  }
 }
