@@ -7,15 +7,14 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const sc = scopedClassMaker('zui-btn');
 
-const Button: React.FC<Props> = (props) => {
+const IconButton: React.FC<Props> = (props) => {
   const {className, ...restProps} = props;
   return (
     // className={`zui-btn ${sc(props.type ? props.type : 'default')}`}
-    <button className={`zui-btn ${sc(props.type ? props.type : 'default', {extra: className})}`} {...restProps}>
+    <button className={`zui-btn zui-btn-icon ${sc(props.type ? props.type : 'default', {extra: className})}`} {...restProps}>
       {props.children}
     </button>
   );
 };
 
-export default Button;
-export {default as IconButton} from './iconButton';
+export default IconButton;

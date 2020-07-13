@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/nightOwl';
 
-import Icon from './lib/icon/icon'
-import Button from './lib/button/button'
+import Icon from './lib/icon/icon';
+import { IconButton } from './lib/button/button';
 
 interface Props {
   path: string;
@@ -19,13 +19,14 @@ const Demo: React.FC<Props> = (props) => {
         <div className="code-view">{props.children}</div>
 
         <div className="code-toolbar">
-          <Button
+          <IconButton
+            className="code-toolbar-iconButton"
             onClick={() => {
               setVisible(!visible);
             }}
           >
-            <Icon name="info"/>
-          </Button>
+            <Icon name="zhankai" />
+          </IconButton>
         </div>
         {visible ? makeHighlight(props.path) : null}
       </div>
