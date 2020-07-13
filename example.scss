@@ -76,26 +76,30 @@ ul,ol{
   }
   &-context {
     padding: 20px;
-    .code-block{
-      margin: 18px 0;
-      border: 1px dashed #f1f1f1;
-      padding: 18px 18px 28px;
-      transition: border-color .3s linear;
-      .code-toolbar{
-        padding-bottom: 8px;
-        border-color: #f1f1f1;
-        border-bottom: 1px dashed #f5f5f5;
-        text-align: right;
+    .code-block-wrap{
+      .title{
+        font-size: 24px;
       }
-      &:hover{
-        border-color:#3498ff;
+      .code-block{
+        margin: 18px 0;
+        border: 1px dashed #f1f1f1;
+        padding: 18px 18px 28px;
+        transition: border-color .3s linear;
+        .code-view{
+          padding: 10px 0;
+        }
+        .code-toolbar{
+          padding-bottom: 8px;
+          border-color: #f1f1f1;
+          border-bottom: 1px dashed #f5f5f5;
+          text-align: right;
+        }
+        &:hover{
+          border-color:#3498ff;
+        }
       }
     }
-    .button-page{
-      .zui-btn{
-        margin-right: 20px;
-      }
-    }
+
   }
   // 按钮
 

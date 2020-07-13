@@ -1,42 +1,51 @@
 import React, { useState } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl'
+import theme from 'prism-react-renderer/themes/nightOwl';
+
+import Icon from './lib/icon/icon'
+import Button from './lib/button/button'
 
 interface Props {
   path: string;
+  title: string;
 }
 
 const Demo: React.FC<Props> = (props) => {
-  const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
   return (
-    <div className="code-block">
-      {props.children}
-      <div className="code-toolbar">
-        <button
-          onClick={() => {
-            setOpen(!open);
-          }}
-        >
-          查看代码
-        </button>
+    <div className="code-block-wrap">
+      <h3 className="title">{props.title}</h3>
+      <div className="code-block">
+        <div className="code-view">{props.children}</div>
+
+        <div className="code-toolbar">
+          <Button
+            onClick={() => {
+              setVisible(!visible);
+            }}
+          >
+            <Icon name="info"/>
+          </Button>
+        </div>
+        {visible ? makeHighlight(props.path) : null}
       </div>
-      {open ? (
-        <Highlight {...defaultProps} code={props.path} language="jsx" theme={theme}>
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
-              {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </pre>
-          )}
-        </Highlight>
-      ) : null}
     </div>
   );
 };
 
+const makeHighlight = (code: string) => (
+  <Highlight {...defaultProps} code={code} language="jsx" theme={theme}>
+    {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      <pre className={className} style={style}>
+        {tokens.map((line, i) => (
+          <div {...getLineProps({ line, key: i })}>
+            {line.map((token, key) => (
+              <span {...getTokenProps({ token, key })} />
+            ))}
+          </div>
+        ))}
+      </pre>
+    )}
+  </Highlight>
+);
 export default Demo;
