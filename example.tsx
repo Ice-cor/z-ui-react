@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
-import IconExample from './lib/icon/icon.example';
+import IconDemo from './lib/icon/iconDemo';
 import DialogExample from './lib/dialog/dialog.example';
-// import ButtonExample from './lib/button/button.example';
 import ButtonDemo from './lib/button/buttonDemo';
 import LayoutExample from './lib/layout/layout.example';
 import FormExample from "./lib/form/form.example";
@@ -49,7 +48,7 @@ ReactDom.render((
                         <header>zui</header>
                     </Header> */}
                     <Content className="page-context">
-                        <Route path="/icon" component={IconExample}/>
+                        <Route path="/icon" component={IconDemo}/>
                         <Route path="/dialog" component={DialogExample}/>
                         <Route path="/button" component={ButtonDemo}/>
                         <Route path="/layout" component={LayoutExample}/>

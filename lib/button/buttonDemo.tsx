@@ -11,7 +11,7 @@ interface Props {}
 const ButtonDemo: React.FC<Props> = (props) => {
   return (
       <Fragment>
-       <Demo path={require('!!raw-loader!./button.example.tsx').default} title="基本">
+       <Demo path={require('!!raw-loader!./button.example.tsx').default} title="默认">
            <ButtonExample />
        </Demo>
        <Demo path={require('!!raw-loader!./button.example2.tsx').default} title="不同状态">
