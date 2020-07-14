@@ -8,7 +8,7 @@ module.exports = Object.assign({}, base, {
     },
     plugins: [   // 打包需要的各种插件
         new htmlWebpackPlugin({   // 打包HTML
-            template: './index.html'   //  HTML模板路径
+            template: './example.html'   //  HTML模板路径
         })
     ],
 });
