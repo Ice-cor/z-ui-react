@@ -6,7 +6,7 @@
 
 UI轮子react版
 
-引入npm命令
+引入
 
 ```javascript
 

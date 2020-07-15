@@ -34,7 +34,7 @@ const Demo: React.FC<Props> = (props) => {
   );
 };
 
-const makeHighlight = (code: string) => (
+export const makeHighlight = (code: string) => (
   <Highlight {...defaultProps} code={code} language="jsx" theme={theme}>
     {({ className, style, tokens, getLineProps, getTokenProps }) => (
       <pre className={className} style={style}>

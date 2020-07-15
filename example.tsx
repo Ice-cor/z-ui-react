@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
 
 import IconDemo from './lib/icon/demo/iconDemo';
 import DialogDemo from './lib/dialog/demo/dialogDemo';
@@ -10,6 +10,7 @@ import FormDemo from "./lib/form/demo/formDemo";
 import InputDemo from "./lib/input/demo/inputDemo";
 
 import {Content, Layout, Sider} from './lib/layout/layout';
+
 
 import './example.scss';
 // import logo from './logo.png'
@@ -21,9 +22,11 @@ ReactDom.render((
             <Layout className="page">
                 <Sider className="page-sider">
                     <div className="page-logo"><img src={logo.default} /></div>
-                    
                     <h2>组件</h2>
                     <ul className="nav-list">
+                        <li className="nav-item" style={{display: 'none'}}>
+                            <Link to="/main">Icon <span className="title-zh">图标</span></Link>
+                        </li>
                         <li className="nav-item">
                             <Link to="/icon">Icon <span className="title-zh">图标</span></Link>
                         </li>
@@ -50,6 +53,14 @@ ReactDom.render((
                         <header>zui</header>
                     </Header> */}
                     <Content className="page-context">
+                        <Switch>
+                            <Route path="/" exact render={()=>{
+                                return (<Redirect to="/icon" />)
+                            }}>
+
+                            </Route>
+                        </Switch>
+                        {/* <Route path="/main" component={HelloPage} /> */}
                         <Route path="/icon" component={IconDemo}/>
                         <Route path="/dialog" component={DialogDemo}/>
                         <Route path="/button" component={ButtonDemo}/>
