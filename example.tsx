@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
-import IconDemo from './lib/icon/iconDemo';
-import DialogDemo from './lib/dialog/dialogDemo';
-import ButtonDemo from './lib/button/buttonDemo';
-import LayoutExample from './lib/layout/layout.example';
+import IconDemo from './lib/icon/demo/iconDemo';
+import DialogDemo from './lib/dialog/demo/dialogDemo';
+import ButtonDemo from './lib/button/demo/buttonDemo';
+import LayoutDemo from './lib/layout/demo/layoutDemo';
 import FormExample from "./lib/form/form.example";
 import InputExample from "./lib/input/input.example";
 
@@ -53,7 +53,7 @@ ReactDom.render((
                         <Route path="/icon" component={IconDemo}/>
                         <Route path="/dialog" component={DialogDemo}/>
                         <Route path="/button" component={ButtonDemo}/>
-                        <Route path="/layout" component={LayoutExample}/>
+                        <Route path="/layout" component={LayoutDemo}/>
                         <Route path="/input" component={InputExample}/>
                         <Route path="/form" component={FormExample}/>
                     </Content>
