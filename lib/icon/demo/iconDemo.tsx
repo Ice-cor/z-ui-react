@@ -1,6 +1,6 @@
 import React from 'react';
 import IconExample from './icon.example';
-import Demo from '../../demo';
+import Demo from '../../../demo';
 // require支持自定义加载方式 !!为自定义加载方式的标志
 // const code = require('!!raw-loader!./button.example.tsx');
 

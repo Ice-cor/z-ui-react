@@ -1,6 +1,6 @@
 import React from 'react';
-import {confirm} from './dialog';
-import Button from '../button/button'
+import {confirm} from '../dialog';
+import Button from '../../button/button'
 
 const IconExample: React.FC = () => {
     // const [visible, setVisible] = useState(false);

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ButtonExample from './button.example'
 import ButtonExample2 from './button.example2'
 import ButtonExample3 from './button.example3'
-import Demo from '../../demo';
+import Demo from '../../../demo';
 // require支持自定义加载方式 !!为自定义加载方式的标志
 // const code = require('!!raw-loader!./button.example.tsx');
 

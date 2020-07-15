@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Dialog from './dialog';
-import Button from '../button/button'
+import Dialog from '../dialog';
+import Button from '../../button/button'
 
 const IconExample: React.FC = () => {
     const [visible, setVisible] = useState(false);

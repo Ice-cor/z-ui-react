@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button';
+import Button from '../button';
 
 const style = {
     marginRight: 20 + 'px'

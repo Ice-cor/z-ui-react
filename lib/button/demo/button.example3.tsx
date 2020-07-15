@@ -1,6 +1,6 @@
 import React from 'react';
-import {IconButton} from './button';
-import Icon from '../icon/icon';
+import {IconButton} from '../button';
+import Icon from '../../icon/icon';
 
 const style = {
     marginRight: 20 + 'px'
