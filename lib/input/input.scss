@@ -26,7 +26,19 @@ $input-prefix: #{$zui-prefix}-input;
   &::-webkit-input-placeholder {
     color: #c9c9cc;
   }
-
+  &-password{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    .zui-input-suffix{
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      color: rgba(0,0,0,.45);
+    }
+  }
   &-textarea {
     height: 150px;
   }

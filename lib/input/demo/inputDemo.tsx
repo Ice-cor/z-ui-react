@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import InputExample from './input.example';
 import InputExample2 from './input.example2';
 import InputExample3 from './input.example3';
+import InputExample4 from './input.example4';
 import Demo from '../../../demo';
 // require支持自定义加载方式 !!为自定义加载方式的标志
 // const code = require('!!raw-loader!./button.example.tsx');
@@ -16,6 +17,12 @@ const InputDemo: React.FC<Props> = (props) => {
         title="默认"
       >
         <InputExample />
+      </Demo>
+      <Demo
+        path={require('!!raw-loader!./input.example4.tsx').default}
+        title="密码框"
+      >
+        <InputExample4 />
       </Demo>
       <Demo
         path={require('!!raw-loader!./input.example2.tsx').default}

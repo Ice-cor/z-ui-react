@@ -6,6 +6,8 @@ const InputExample: React.FC = (props) => {
         <div>
             <Input placeholder="Basic input" type="text" style={{width: 300 + 'px'}} disabled/>
             
+            <Input placeholder="Basic input" type="password" style={{width: 300 + 'px', marginTop: 24 + 'px'}} disabled/>
+            
             <Textarea placeholder="Basic input" style={{width: 300 + 'px', marginTop: 24 + 'px'}} disabled/>
         </div>
     );
