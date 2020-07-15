@@ -1,12 +1,12 @@
 {
   "name": "zui-r-1",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "files": [
     "/dist/**/*"
   ],
   "description": "UI轮子react版",
   "main": "dist/lip/index.js",
-  "types": "dist/lib/index",
+  "typings": "dist/lib/index.d.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js ",
     "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
