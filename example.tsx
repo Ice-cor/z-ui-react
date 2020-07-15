@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
 import IconDemo from './lib/icon/iconDemo';
-import DialogExample from './lib/dialog/dialog.example';
+import DialogDemo from './lib/dialog/dialogDemo';
 import ButtonDemo from './lib/button/buttonDemo';
 import LayoutExample from './lib/layout/layout.example';
 import FormExample from "./lib/form/form.example";
@@ -12,13 +12,15 @@ import InputExample from "./lib/input/input.example";
 import {Content, Layout, Sider} from './lib/layout/layout';
 
 import './example.scss';
-import logo from './logo.png'
+// import logo from './logo.png'
+
+const logo = require('./logo.png')
 
 ReactDom.render((
         <Router>
             <Layout className="page">
                 <Sider className="page-sider">
-                    <div className="page-logo"><img src={logo} /></div>
+                    <div className="page-logo"><img src={logo.default} /></div>
                     
                     <h2>组件</h2>
                     <ul className="nav-list">
@@ -49,7 +51,7 @@ ReactDom.render((
                     </Header> */}
                     <Content className="page-context">
                         <Route path="/icon" component={IconDemo}/>
-                        <Route path="/dialog" component={DialogExample}/>
+                        <Route path="/dialog" component={DialogDemo}/>
                         <Route path="/button" component={ButtonDemo}/>
                         <Route path="/layout" component={LayoutExample}/>
                         <Route path="/input" component={InputExample}/>

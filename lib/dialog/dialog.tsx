@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import classnames, {scopedClassMaker} from '../_util/classes';
 
 import Icon from '../icon/icon';
+import Button from '../button/button'
 import './dialog.scss';
 
 enum DialogType {
@@ -94,7 +95,7 @@ const confirm = ({content, title, yes, no}: { content: string, title?: string, y
         close();
         no && no();
     };
-    const buttons = [<button onClick={onYes}>确定</button>, <button onClick={onNo}>取消</button>];
+    const buttons = [<Button type="primary" onClick={onYes}>确定</Button>, <Button onClick={onNo}>取消</Button>];
     const close = modal({content, buttons, dialogType: DialogType.confirm});
 };
 
