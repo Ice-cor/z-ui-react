@@ -1,0 +1,25 @@
+@import "../style/themes/index";
+
+$input-prefix: #{$zui-prefix}-form;
+
+.#{$input-prefix} {
+    &-row{
+        margin-bottom: 12px;
+    }
+    &-label{
+        display: flex;
+        &-name{
+            width: 100px;
+            padding-right: 12px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+    &-footer{
+        margin-left: 100px;
+        > button.zui-btn {
+            margin-right: 12px;
+        }
+    }
+}

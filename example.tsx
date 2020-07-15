@@ -6,7 +6,7 @@ import IconDemo from './lib/icon/demo/iconDemo';
 import DialogDemo from './lib/dialog/demo/dialogDemo';
 import ButtonDemo from './lib/button/demo/buttonDemo';
 import LayoutDemo from './lib/layout/demo/layoutDemo';
-import FormExample from "./lib/form/form.example";
+import FormDemo from "./lib/form/demo/formDemo";
 import InputDemo from "./lib/input/demo/inputDemo";
 
 import {Content, Layout, Sider} from './lib/layout/layout';
@@ -55,7 +55,7 @@ ReactDom.render((
                         <Route path="/button" component={ButtonDemo}/>
                         <Route path="/layout" component={LayoutDemo}/>
                         <Route path="/input" component={InputDemo}/>
-                        <Route path="/form" component={FormExample}/>
+                        <Route path="/form" component={FormDemo}/>
                     </Content>
                     {/*<Footer>footer</Footer>*/}
                 </Layout>

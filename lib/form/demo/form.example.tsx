@@ -1,7 +1,7 @@
 import * as React from "react";
-import Form from "./form";
-import {useState, Fragment} from "react";
-import Button from "../button/button";
+import Form from "../form";
+import {useState} from "react";
+import Button from "../../button/button";
 
 
 const FormExample: React.FC = () => {
@@ -15,14 +15,13 @@ const FormExample: React.FC = () => {
     ]);
     return (
         <Form
+            style={{width: 400 + 'px'}}
             value={formData}
             fields={fields}
-            buttons={
-                <Fragment>
-                    <Button type="primary">提交</Button>
+            buttons={[
+                    <Button type="primary">提交</Button>,
                     <Button>返回</Button>
-                </Fragment>
-            }
+            ]}
         />
     );
 };
