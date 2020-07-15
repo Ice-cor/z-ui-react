@@ -1,6 +1,5 @@
 import React from 'react';
 import {Layout, Header, Sider, Footer, Content} from "../layout";
-import '../../style/exampleStyles/layout.scss'
 
 const LayoutExample: React.FC = () => {
     return (

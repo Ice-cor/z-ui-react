@@ -4,24 +4,24 @@ import {scopedClassMaker} from "../_util/classes";
 
 import "./input.scss";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement>{
+interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement>{
     className?: string;
  
 }
 
 const sc = scopedClassMaker('zui-input');
 
-const Input: React.FC<Props> = (props) => {
+const Textarea: React.FC<Props> = (props) => {
     const {className, ...restProps} = props;
     return (
         <Fragment>
-            <input
-                className={sc('', {extra: className})}
+            <textarea
+                className={`zui-input-textarea ${sc('', {extra: className})}`}
                 {...restProps}
+
             />
         </Fragment>
     );
 };
 
-export default Input;
-export {default as Textarea} from './textarea';
+export default Textarea;

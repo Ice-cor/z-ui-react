@@ -1,13 +1,10 @@
 import * as React from "react";
-import Input from "../input/input";
+import {Textarea} from "../input"
 
 const InputExample: React.FC = (props) => {
     return (
         <div>
-            <div>
-                <Input placeholder="Basic input" type="text"/>
-            </div>
-
+            <Textarea style={{width: 300 + 'px'}} placeholder="Basic Textarea" />
         </div>
     );
 };
