@@ -16,6 +16,9 @@ $input-prefix: #{$zui-prefix}-form;
             align-items: center;
         }
     }
+    .zui-input-password{
+        width: 100%;
+    }
     &-footer{
         margin-left: 100px;
         > button.zui-btn {

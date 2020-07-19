@@ -66,11 +66,12 @@ ul,ol{
           font-size: 14px;
           .title-zh{
             font-size: 12px;
+            margin-left: 6px;
           }
         }
-        a:focus{
-          color: #1675e0;
-        }
+      }
+      .nav-item.active a {
+        color: #1675e0;
       }
     }
   }

@@ -17,20 +17,69 @@ import './example.scss';
 
 const logo = require('./logo.png')
 
-ReactDom.render((
+const Example:React.FC = () => {
+    const routerList = [
+        {
+            path: '/icon',
+            en: 'Icon',
+            zh: '图标'
+        },
+        {
+            path: '/button',
+            en: 'Button',
+            zh: '按钮'
+        },
+        {
+            path: '/dialog',
+            en: 'Dialog',
+            zh: '对话框'
+        },
+        {
+            path: '/layout',
+            en: 'Layout',
+            zh: '布局'
+        },
+        {
+            path: '/input',
+            en: 'Input',
+            zh: '输入框'
+        },
+        {
+            path: '/form',
+            en: 'form',
+            zh: '表单'
+        }
+    ]
+    const [state, setState] = React.useState('Icon')
+    // const onClick = (e: React.MouseEvent):void => {
+    //     console.log(e.target)
+    // }
+    return (
         <Router>
             <Layout className="page">
                 <Sider className="page-sider">
                     <div className="page-logo"><img src={logo.default} /></div>
                     <h2>组件</h2>
                     <ul className="nav-list">
-                        <li className="nav-item" style={{display: 'none'}}>
+                        {/* <li className="nav-item" style={{display: 'none'}}>
                             <Link to="/main">Icon <span className="title-zh">图标</span></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/icon">Icon <span className="title-zh">图标</span></Link>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                        {
+                            routerList.map(item => (
+                                <li 
+                                    className={`nav-item ${state === item.en ? 'active' : ''}`} 
+                                    key={item.zh} 
+                                    onClick={() => {setState(item.en)}}
+                                >
+                                    <Link to={item.path}>
+                                        {item.en}  
+                                        <span className="title-zh">{item.zh}</span>
+                                    </Link>
+                                </li>
+                            ))
+                        }
+                      
+                        {/* <li className="nav-item">
                             <Link to="/button">button <span className="title-zh">按钮</span></Link>
                         </li>
                         <li className="nav-item">
@@ -44,7 +93,7 @@ ReactDom.render((
                         </li>
                         <li className="nav-item">
                             <Link to="/form">Form <span className="title-zh">表单</span></Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </Sider>
 
@@ -74,4 +123,9 @@ ReactDom.render((
             </Layout>
         </Router>
     )
+}
+
+
+
+ReactDom.render(<Example />
     , document.getElementById('root'));
